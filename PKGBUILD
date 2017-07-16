@@ -16,14 +16,16 @@ source=("$_mirror/pool/non-free/d/deepin.com.qq.office/deepin.com.qq.office_${de
   "https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/system.reg"
   "https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/update.policy"
   "https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/user.reg"
-  "https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/userdef.reg")
+  "https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/userdef.reg"
+  "https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/wqy-microhei.ttc")
 md5sums=('24de53e74f6917dad0693b57e1e6ba4b'
   '4d63de9d589c2d60bb36107849fc87e2'
   'SKIP'
   'SKIP'
   'SKIP'
   'SKIP'
-  'SKIP')
+  'SKIP'
+  '966af48e02884546677a2f762f6725b9')
 
 build() {
   pushd ${srcdir}
