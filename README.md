@@ -15,6 +15,7 @@
   
   安装输入：
   
+  
   mkdir wszqkzqk-deepin-wine-tim-arch
   
   cd wszqkzqk-deepin-wine-tim-arch
