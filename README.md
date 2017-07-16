@@ -1,5 +1,4 @@
-# wszqkzqk-deepin-wine-tim
-在arch以及衍生版本上运行deepin-TIM
+# 在arch以及衍生版本上运行deepin-TIM
 
    用过deepin的都应该知道，deepin的wine-QQ，wine-TIM运行都十分完美，这个便是把deepin打包的TIM容器移植到arch来运行。
    
