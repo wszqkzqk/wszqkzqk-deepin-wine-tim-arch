@@ -26,7 +26,8 @@
   
   makepkg -i
   
-  方法2：
+  
+  方法2：
   
   git clone https://github.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch
   
