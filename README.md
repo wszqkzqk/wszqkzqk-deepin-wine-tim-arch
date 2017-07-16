@@ -29,6 +29,6 @@
   然后直接运行开始菜单中创建的TIM的图标，它会提示安装，点击立即安装即可（我去掉了自带的TIM，替换为了最新版）
   
 
-  如果遇到字体显示问题，可以把Windows下的simsun.ttf放到～/.deepinwine/Deepin-TIM/drive_c/windows/Fonts中，使用前要确定是否有字体版权。懒得配置的，可以看看lulinux大神的博客：https://www.lulinux.com ，里面有一键配置（PS：大神做得辛苦要求捐赠不要喷我。。。）
+  如果遇到字体发虚又懒得配置的，可以看看lulinux大神的博客：https://www.lulinux.com ，里面有一键配置（PS：大神做得辛苦要求捐赠不要喷我。。。）
   
   欢迎大家测试反馈。
