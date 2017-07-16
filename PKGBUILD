@@ -41,6 +41,7 @@ build() {
   cp ../system.reg deepintimdir/system.reg
   cp ../update.policy deepintimdir/update.policy
   cp ../user.reg deepintimdir/user.reg
+  cp ../wqy-microhei.ttc deepintimdir/drive_c/windows/Fonts/wqy-microhei.ttc
   pushd deepintimdir
   7z a -t7z -r ../files.7z *
   popd
