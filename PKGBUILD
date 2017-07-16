@@ -17,8 +17,8 @@ source=("$_mirror/pool/non-free/d/deepin.com.qq.office/deepin.com.qq.office_${de
   "https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/update.policy"
   "https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/user.reg"
   "https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/userdef.reg")
-md5sums=('SKIP'
-  'SKIP'
+md5sums=('24de53e74f6917dad0693b57e1e6ba4b'
+  '4d63de9d589c2d60bb36107849fc87e2'
   'SKIP'
   'SKIP'
   'SKIP'
