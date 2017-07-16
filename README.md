@@ -24,8 +24,7 @@
   
   wget https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/PKGBUILD
   
-  makepkg -i
-  
+  makepkg -i 
   
   方法2：
   
