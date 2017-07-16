@@ -16,8 +16,12 @@
   
   安装输入：
   
+  
+  
   方法1：
   
+  
+  
   mkdir wszqkzqk-deepin-wine-tim-arch
   
   cd wszqkzqk-deepin-wine-tim-arch
@@ -26,7 +30,11 @@
   
   makepkg -i 
   
+  
+  
   方法2：
+  
+  
   
   git clone https://github.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch
   
