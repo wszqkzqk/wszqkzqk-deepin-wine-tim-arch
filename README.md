@@ -21,7 +21,7 @@
   
   cd wszqkzqk-deepin-wine-tim-arch
   
-  wget https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/PKGBUILD ./PKGBUILD
+  wget https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/PKGBUILD
   
   makepkg -i
   
