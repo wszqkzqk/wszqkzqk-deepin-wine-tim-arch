@@ -16,7 +16,8 @@
   
   安装输入：
   
-  
+  方法1：
+  
   mkdir wszqkzqk-deepin-wine-tim-arch
   
   cd wszqkzqk-deepin-wine-tim-arch
@@ -25,6 +26,13 @@
   
   makepkg -i
   
+  方法2：
+  
+  git clone https://github.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch
+  
+  cd wszqkzqk-deepin-wine-tim-arch
+  
+  makepkg -i
   
   然后直接运行开始菜单中创建的TIM的图标，它会提示安装，点击立即安装即可（我去掉了自带的TIM，替换为了最新版）
   
