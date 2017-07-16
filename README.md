@@ -28,7 +28,7 @@
   
   wget https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/PKGBUILD
   
-  makepkg -i 
+  makepkg -si 
   
   
   
@@ -41,7 +41,7 @@
   
   cd wszqkzqk-deepin-wine-tim-arch
   
-  makepkg -i
+  makepkg -si
   
   然后直接运行开始菜单中创建的TIM的图标，它会提示安装，点击立即安装即可（我去掉了自带的TIM，替换为了最新版）
   
