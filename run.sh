@@ -5,6 +5,8 @@
 #   Author:     Li LongYu <lilongyu@linuxdeepin.com>
 #               Peng Hao <penghao@linuxdeepin.com>
 
+#               wszqkzqk <wszqkzqk@gmail.com>
+
 WINEPREFIX="$HOME/.deepinwine/Deepin-TIM"
 APPDIR="/opt/deepinwine/apps/Deepin-TIM"
 APPVER="1.1.5"
