@@ -5,11 +5,10 @@ pkgver=1.1.5
 deepintimver=1.0.4deepin4
 pkgrel=0
 pkgdesc="Latest Tencent TIM (com.qq.office) on Deepin Wine For Archlinux"
-arch=("x86_64")
+arch=("x86_64""x86")
 url="http://tim.qq.com/"
 license=('custom')
 depends=('p7zip' 'wine' 'xorg-xwininfo' 'xdotool')
-conflicts=('wine-tim''deepin-tim-for-arch-stable')
 _mirror="https://mirrors.ustc.edu.cn/deepin"
 source=("$_mirror/pool/non-free/d/deepin.com.qq.office/deepin.com.qq.office_${deepintimver}_i386.deb"
   "http://dldir1.qq.com/qqfile/qq/TIM${pkgver}/21175/TIM${pkgver}.exe"
