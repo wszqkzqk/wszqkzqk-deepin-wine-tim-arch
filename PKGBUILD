@@ -37,12 +37,13 @@ build() {
   7z x dpkgdir/opt/deepinwine/apps/Deepin-TIM/files.7z -odeepintimdir
   msg "Removing original outdated TIM directory ..."
   rm -r deepintimdir/drive_c/Program\ Files/Tencent/TIM
-  msg "Repackaging app archive ..."
+  msg "Adding config files and fonts"
   cp ../userdef.reg deepintimdir/userdef.reg
   cp ../system.reg deepintimdir/system.reg
   cp ../update.policy deepintimdir/update.policy
   cp ../user.reg deepintimdir/user.reg
   cp ../wqy-microhei.ttc deepintimdir/drive_c/windows/Fonts/wqy-microhei.ttc
+  msg "Repackaging app archive ..."
   pushd deepintimdir
   7z a -t7z -r ../files.7z *
   popd
