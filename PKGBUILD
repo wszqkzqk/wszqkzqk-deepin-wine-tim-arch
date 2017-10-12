@@ -1,4 +1,5 @@
 # Maintainer: wszqkzqk <wszqkzqk@gmail.com>
+# Maintainer: ssfdust <ssfdust@gmail.com>
 
 pkgname=deepin-tim-for-arch
 pkgver=1.1.5
@@ -14,17 +15,13 @@ _mirror="https://mirrors.ustc.edu.cn/deepin"
 source=("$_mirror/pool/non-free/d/deepin.com.qq.office/deepin.com.qq.office_${deepintimver}_i386.deb"
   "http://dldir1.qq.com/qqfile/qq/TIM${pkgver}/21175/TIM${pkgver}.exe"
   "run.sh"
-  "system.reg"
-  "update.policy"
-  "user.reg"
-  "userdef.reg")
+  "reg_files.tar.bz2"
+  "update.policy")
 md5sums=('24de53e74f6917dad0693b57e1e6ba4b'
   '4d63de9d589c2d60bb36107849fc87e2'
   '458c0f3c66cf2dbd653738fc82937aed'
-  '8a38b29888a4ed68ac0b1a36f349e594'
-  'a66646b473a3fbad243ac1afd64da07a'
-  '1d64d2e10f716f12ab6fa8200edea233'
-  'b0c17bbb093d794d6a3d8c3db01c482b')
+  'e3fd501cbd6149c5bbcc48a33cf9be0b'
+  'a66646b473a3fbad243ac1afd64da07a')
 
 build() {
   msg "Extracting DPKG package ..."
@@ -35,6 +32,7 @@ build() {
   msg "Removing original outdated TIM directory ..."
   rm -r "${srcdir}/deepintimdir/drive_c/Program Files/Tencent/TIM"
   msg "Adding config files and fonts"
+  tar -jxvf reg_files.tar.bz2 -C "${srcdir}/"
   cp userdef.reg "${srcdir}/deepintimdir/userdef.reg"
   cp system.reg "${srcdir}/deepintimdir/system.reg"
   cp update.policy "${srcdir}/deepintimdir/update.policy"
