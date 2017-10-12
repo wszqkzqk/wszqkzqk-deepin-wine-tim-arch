@@ -8,56 +8,49 @@ pkgdesc="Latest Tencent TIM (com.qq.office) on Deepin Wine For Archlinux"
 arch=("x86_64")
 url="http://tim.qq.com/"
 license=('custom')
-depends=('p7zip' 'wine' 'xorg-xwininfo' 'xdotool')
+depends=('p7zip' 'wine' 'xorg-xwininfo' 'xdotool' 'wqy-microhei')
 conflicts=('wine-tim')
 _mirror="https://mirrors.ustc.edu.cn/deepin"
 source=("$_mirror/pool/non-free/d/deepin.com.qq.office/deepin.com.qq.office_${deepintimver}_i386.deb"
   "http://dldir1.qq.com/qqfile/qq/TIM${pkgver}/21175/TIM${pkgver}.exe"
-  "https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/run.sh"
-  "https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/system.reg"
-  "https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/update.policy"
-  "https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/user.reg"
-  "https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/userdef.reg"
-  "https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/wqy-microhei.ttc")
+  "run.sh"
+  "system.reg"
+  "update.policy"
+  "user.reg"
+  "userdef.reg")
 md5sums=('24de53e74f6917dad0693b57e1e6ba4b'
   '4d63de9d589c2d60bb36107849fc87e2'
-  'SKIP'
-  'SKIP'
-  'SKIP'
-  'SKIP'
-  'SKIP'
-  '966af48e02884546677a2f762f6725b9')
+  '458c0f3c66cf2dbd653738fc82937aed'
+  '8a38b29888a4ed68ac0b1a36f349e594'
+  'a66646b473a3fbad243ac1afd64da07a'
+  '1d64d2e10f716f12ab6fa8200edea233'
+  'b0c17bbb093d794d6a3d8c3db01c482b')
 
 build() {
-  pushd ${srcdir}
   msg "Extracting DPKG package ..."
-  mkdir dpkgdir
-  tar -xvf data.tar.xz -C dpkgdir
+  mkdir -p "${srcdir}/dpkgdir"
+  tar -xvf data.tar.xz -C "${srcdir}/dpkgdir"
   msg "Extracting Deepin Wine TIM archive ..."
-  7z x dpkgdir/opt/deepinwine/apps/Deepin-TIM/files.7z -odeepintimdir
+  7z x -aoa "${srcdir}/dpkgdir/opt/deepinwine/apps/Deepin-TIM/files.7z" -o"${srcdir}/deepintimdir"
   msg "Removing original outdated TIM directory ..."
-  rm -r deepintimdir/drive_c/Program\ Files/Tencent/TIM
+  rm -r "${srcdir}/deepintimdir/drive_c/Program Files/Tencent/TIM"
   msg "Adding config files and fonts"
-  cp ../userdef.reg deepintimdir/userdef.reg
-  cp ../system.reg deepintimdir/system.reg
-  cp ../update.policy deepintimdir/update.policy
-  cp ../user.reg deepintimdir/user.reg
-  cp ../wqy-microhei.ttc deepintimdir/drive_c/windows/Fonts/wqy-microhei.ttc
+  cp userdef.reg "${srcdir}/deepintimdir/userdef.reg"
+  cp system.reg "${srcdir}/deepintimdir/system.reg"
+  cp update.policy "${srcdir}/deepintimdir/update.policy"
+  cp user.reg "${srcdir}/deepintimdir/user.reg"
+  cp "/usr/share/fonts/wenquanyi/wqy-microhei/wqy-microhei.ttc" "${srcdir}/deepintimdir/drive_c/windows/Fonts/wqy-microhei.ttc"
   msg "Repackaging app archive ..."
-  pushd deepintimdir
-  7z a -t7z -r ../files.7z *
-  popd
-  popd
+  7z a -t7z -r "${srcdir}/files.7z" "${srcdir}/deepintimdir/*"
 }
 
 package() {
-  pushd ${pkgdir}
   msg "Preparing icons ..."
-  mkdir -p usr/share
-  mv ${srcdir}/dpkgdir/usr/local/share/* usr/share/
+  mkdir -p "${pkgdir}/usr/share"
+  mv ${srcdir}/dpkgdir/usr/local/share/* "${pkgdir}/usr/share/"
   msg "Copying TIM to /opt/deepinwine/apps/Deepin-TIM ..."
-  mkdir -p opt/deepinwine/apps/Deepin-TIM
-  cp ${srcdir}/{files.7z,run.sh,TIM$pkgver.exe} -i opt/deepinwine/apps/Deepin-TIM/
-  chmod +x opt/deepinwine/apps/Deepin-TIM/run.sh
-  popd
+  mkdir -p "${pkgdir}/opt/deepinwine/apps/Deepin-TIM"
+  install -m644 "${srcdir}/files.7z" "${pkgdir}/opt/deepinwine/apps/Deepin-TIM/"
+  install -m755 "${srcdir}/run.sh" "${pkgdir}/opt/deepinwine/apps/Deepin-TIM/"
+  install -m644 "${srcdir}/TIM$pkgver.exe" "${pkgdir}/opt/deepinwine/apps/Deepin-TIM/"
 }

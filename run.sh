@@ -25,8 +25,8 @@ CallApp()
 {
 	if [ ! -f $WINEPREFIX/reinstalled ]
 	then
-		touch $WINEPREFIX/reinstalled
 		env WINEPREFIX=$WINEPREFIX wine $APPDIR/TIM$TIMVER.exe
+		touch $WINEPREFIX/reinstalled
 	else
 		bash "$WINEPREFIX/drive_c/deepin/EnvInit.sh"
 	fi
