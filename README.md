@@ -19,26 +19,6 @@
 
 # 安装方法
   安装输入(注意在安装前要先卸载AUR里的'wine-tim'软件包)：
-  
-  
-  
-  方法1：
-  
-  
-  ```
-  mkdir wszqkzqk-deepin-wine-tim-arch
-  
-  cd wszqkzqk-deepin-wine-tim-arch
-  
-  wget https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/PKGBUILD
-  
-  makepkg -si 
-  ```
-  
-  
-  
-  方法2：
-  
   
   ```
   git clone https://github.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch
