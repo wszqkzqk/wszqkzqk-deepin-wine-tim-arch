@@ -13,8 +13,11 @@
   
   清风博主的wine-qq也有这两个bug（他忽略了视频通话，没写），但是他没有列出断线问题，经我的初步测试，这款deepin-tim-for-arch挂一晚上不掉线还是可以的，但是，有一种情况真的会掉线：网络环境发生变化或者网络质量差到断流。如果发生上述情况，请关闭程序重新运行。Linux下很难找到能够掉线后自动重连的wine-QQ或wine-TIM（除了deepin自家，但是其他发行版不可用），lulinux好像在他的博客分享了一款，但是那毕竟是QQ2013，太旧了，按照腾讯的坑规则，很快就无法登录了。
   
-  
-#安装方法
+# 更新说明
+
+本仓库现在已经不再维护
+
+# 安装方法
   安装输入(注意在安装前要先卸载AUR里的'wine-tim'软件包)：
   
   
@@ -22,7 +25,7 @@
   方法1：
   
   
-  
+  ```
   mkdir wszqkzqk-deepin-wine-tim-arch
   
   cd wszqkzqk-deepin-wine-tim-arch
@@ -30,19 +33,18 @@
   wget https://raw.githubusercontent.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch/master/PKGBUILD
   
   makepkg -si 
+  ```
   
   
   
   方法2：
   
   
-  
+  ```
   git clone https://github.com/wszqkzqk/wszqkzqk-deepin-wine-tim-arch
-  
-  
   cd wszqkzqk-deepin-wine-tim-arch
-  
   makepkg -si
+  ```
   
   然后直接运行开始菜单中创建的TIM的图标，它会提示安装，点击立即安装即可（我去掉了自带的TIM，替换为了最新版）
   
@@ -50,8 +52,5 @@
   修复了部分字符无法显示的BUG，但是由于版权问题，字体看起来效果不是特别好，如果看不惯字体的，可以自行将微软雅黑或者微软宋体放进～/.deepinwine/Deepin-TIM/drive_c/windows/Fonts中。
   
   欢迎大家测试反馈。
-  
-#关于更新的说明：
-
-  本人初三党，难免更新有所耽误，请大家体谅一下，如果能够正常运行，正常使用，我觉得大家并没有必要因为追求版本催我更新，如果软件功能已经无法正常使用，可以在issues中回复反馈也可以QQ找我：1726509538；或者邮箱：wszqkzqk@gmail.com  。
+ 
   
